@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="anchorPane1" prefHeight="653.0" prefWidth="680.0" style="-fx-background-color: #FFFECB;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.tictactoe.service.tic_tac_toe.controller.GameController">
+   <children>
+      <ImageView fitHeight="119.0" fitWidth="123.0" layoutX="23.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icon_img.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="239.0" layoutY="47.0" text="TIC TAC TOE">
+         <font>
+            <Font name="Constantia Bold Italic" size="33.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.42920356514179603" centerY="0.4469697114193078" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9368420839309692" green="0.027758285403251648" blue="0.027758285403251648" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.05263157933950424" green="0.05048732832074165" blue="0.05048732832074165" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <effect>
+            <DropShadow radius="9.415" spread="0.06" width="18.66" />
+         </effect>
+      </Label>
+      <Label fx:id="playerLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="86.0" layoutY="105.0" prefHeight="23.0" prefWidth="508.0" text="Let's Play" textFill="#758694">
+         <font>
+            <Font name="Constantia Bold" size="25.0" />
+         </font>
+      </Label>
+      <Pane fx:id="pane1" layoutX="95.0" layoutY="159.0" prefHeight="431.0" prefWidth="490.0">
+         <children>
+            <GridPane fx:id="gridPane" alignment="CENTER" layoutX="34.0" layoutY="28.0" prefHeight="375.0" prefWidth="422.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="button00" mnemonicParsing="false" onAction="#onButtonClick" prefHeight="119.0" prefWidth="137.0" style="-fx-border-color: #000000;">
+                     <font>
+                        <Font name="Constantia Bold" size="30.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button20" mnemonicParsing="false" onAction="#onButtonClick" prefHeight="119.0" prefWidth="137.0" style="-fx-border-color: #000000;" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Constantia Bold" size="30.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button10" mnemonicParsing="false" onAction="#onButtonClick" prefHeight="119.0" prefWidth="137.0" style="-fx-border-color: #000000;" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Constantia Bold" size="30.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button01" mnemonicParsing="false" onAction="#onButtonClick" prefHeight="119.0" prefWidth="137.0" style="-fx-border-color: #000000;" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Constantia Bold" size="30.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button11" mnemonicParsing="false" onAction="#onButtonClick" prefHeight="119.0" prefWidth="137.0" style="-fx-border-color: #000000;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Constantia Bold" size="30.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button21" mnemonicParsing="false" onAction="#onButtonClick" prefHeight="119.0" prefWidth="137.0" style="-fx-border-color: #000000;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Constantia Bold" size="30.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button02" mnemonicParsing="false" onAction="#onButtonClick" prefHeight="119.0" prefWidth="137.0" style="-fx-border-color: #000000;" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="Constantia Bold" size="30.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button12" mnemonicParsing="false" onAction="#onButtonClick" prefHeight="119.0" prefWidth="137.0" style="-fx-border-color: #000000;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Constantia Bold" size="30.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button22" mnemonicParsing="false" onAction="#onButtonClick" prefHeight="119.0" prefWidth="137.0" style="-fx-border-color: #000000;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Constantia Bold" size="30.0" />
+                     </font>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+      <JFXButton fx:id="playAgainButton" buttonType="RAISED" layoutX="276.0" layoutY="590.0" onAction="#playAgainButtonOnAction" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #000000; -fx-background-color: #00FF9C;" text="Play Again">
+         <font>
+            <Font name="Constantia Bold Italic" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow height="37.38" radius="14.095" spread="0.07">
+               <color>
+                  <Color red="0.04210526496171951" green="0.041325535625219345" blue="0.041325535625219345" />
+               </color>
+            </DropShadow>
+         </effect>
+      </JFXButton>
+   </children>
+</AnchorPane>
